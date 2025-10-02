@@ -18,8 +18,8 @@ import (
 	"github.com/sap/component-operator-runtime/pkg/component"
 	"github.com/sap/component-operator-runtime/pkg/operator"
 
-	operatorv1alpha1 "github.com/sap/cert-manager-cop/api/v1alpha1"
-	"github.com/sap/cert-manager-cop/internal/generator"
+	operatorv1alpha1 "github.com/zdenko-kovac/cert-manager-cop/api/v1alpha1"
+	"github.com/zdenko-kovac/cert-manager-cop/internal/generator"
 )
 
 const Name = "cert-manager-cop.cs.sap.com"

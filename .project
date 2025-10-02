@@ -3,7 +3,7 @@ codeGeneratorVersion: v0.28.1
 controllerRuntimeVersion: v0.16.0
 controllerToolsVersion: v0.13.0
 envtestKubernetesVersion: 1.27.1
-goModule: github.com/sap/cert-manager-cop
+goModule: github.com/zdenko-kovac/cert-manager-cop
 goVersion: "1.21"
 groupName: operator.kyma-project.io
 groupVersion: v1alpha1

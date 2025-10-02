@@ -20,7 +20,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 
-	"github.com/sap/cert-manager-cop/pkg/operator"
+	"github.com/zdenko-kovac/cert-manager-cop/pkg/operator"
 )
 
 var (

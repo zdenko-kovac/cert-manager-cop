@@ -1,6 +1,6 @@
 # CertManager Component Operator
 
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/cert-manager-cop)](https://api.reuse.software/info/github.com/SAP/cert-manager-cop)
+[![REUSE status](https://api.reuse.software/badge/github.com/zdenko-kovac/cert-manager-cop)](https://api.reuse.software/info/github.com/zdenko-kovac/cert-manager-cop)
 
 ## About this project
 
@@ -30,7 +30,7 @@ In addition, the following attributes can be supplied in `spec`:
 
 ## Support, Feedback, Contributing
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/cert-manager-cop/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/zdenko-kovac/cert-manager-cop/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## Code of Conduct
 
@@ -38,4 +38,4 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Licensing
 
-Copyright 2024 SAP SE or an SAP affiliate company and cert-manager-cop contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/cert-manager-cop).
+Copyright 2024 SAP SE or an SAP affiliate company and cert-manager-cop contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/zdenko-kovac/cert-manager-cop).

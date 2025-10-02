@@ -23,28 +23,28 @@ ln -s "$BASEDIR"/api/v1alpha1 "$TEMPDIR"/apis/operator.kyma-project.io/v1alpha1
   --input-base "$TEMPDIR"/apis \
   --input operator.kyma-project.io/v1alpha1 \
   --go-header-file "$BASEDIR"/hack/boilerplate.go.txt \
-  --output-pkg github.com/sap/cert-manager-cop/pkg/client/clientset \
+  --output-pkg github.com/zdenko-kovac/cert-manager-cop/pkg/client/clientset \
   --output-dir "$TEMPDIR"/pkg/client/clientset \
   --plural-exceptions CertManager:certmanagers
 
 "$GOBIN"/lister-gen \
   --go-header-file "$BASEDIR"/hack/boilerplate.go.txt \
-  --output-pkg github.com/sap/cert-manager-cop/pkg/client/listers \
+  --output-pkg github.com/zdenko-kovac/cert-manager-cop/pkg/client/listers \
   --output-dir "$TEMPDIR"/pkg/client/listers \
   --plural-exceptions CertManager:certmanagers \
-  github.com/sap/cert-manager-cop/tmp/gen/apis/operator.kyma-project.io/v1alpha1
+  github.com/zdenko-kovac/cert-manager-cop/tmp/gen/apis/operator.kyma-project.io/v1alpha1
 
 "$GOBIN"/informer-gen \
-  --versioned-clientset-package github.com/sap/cert-manager-cop/pkg/client/clientset/versioned \
-  --listers-package github.com/sap/cert-manager-cop/pkg/client/listers \
+  --versioned-clientset-package github.com/zdenko-kovac/cert-manager-cop/pkg/client/clientset/versioned \
+  --listers-package github.com/zdenko-kovac/cert-manager-cop/pkg/client/listers \
   --go-header-file "$BASEDIR"/hack/boilerplate.go.txt \
-  --output-pkg github.com/sap/cert-manager-cop/pkg/client/informers \
+  --output-pkg github.com/zdenko-kovac/cert-manager-cop/pkg/client/informers \
   --output-dir "$TEMPDIR"/pkg/client/informers \
   --plural-exceptions CertManager:certmanagers \
-  github.com/sap/cert-manager-cop/tmp/gen/apis/operator.kyma-project.io/v1alpha1
+  github.com/zdenko-kovac/cert-manager-cop/tmp/gen/apis/operator.kyma-project.io/v1alpha1
 
 find "$TEMPDIR"/pkg/client -name "*.go" -exec \
-  perl -pi -e "s#github\.com/sap/cert-manager-cop/tmp/gen/apis/operator\.kyma-project\.io/v1alpha1#github.com/sap/cert-manager-cop/api/v1alpha1#g" \
+  perl -pi -e "s#github\.com/sap/cert-manager-cop/tmp/gen/apis/operator\.kyma-project\.io/v1alpha1#github.com/zdenko-kovac/cert-manager-cop/api/v1alpha1#g" \
   {} +
 
 rm -rf "$BASEDIR"/pkg/client

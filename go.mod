@@ -1,4 +1,4 @@
-module github.com/sap/cert-manager-cop
+module github.com/zdenko-kovac/cert-manager-cop
 
 go 1.23.5
 
