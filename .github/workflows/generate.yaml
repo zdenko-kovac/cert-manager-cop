@@ -27,8 +27,8 @@ jobs:
         make generate
         make manifests
 
-        git config user.name "${{ vars.WORKFLOW_USER_NAME }}"
-        git config user.email "${{ vars.WORKFLOW_USER_EMAIL }}"
+        git config user.name "zdenko-kovac"
+        git config user.email "zdenko.kovac@sap.com"
         git add -A
         git commit -m "Update generated artifacts"
         git push

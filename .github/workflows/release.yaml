@@ -52,7 +52,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v5
       with:
-        token: ${{ secrets.WORKFLOW_USER_GH_TOKEN }}
+        token: ${{ secrets.GH_TOKEN }}
         fetch-depth: 0
 
     - name: Setup semver
@@ -156,8 +156,8 @@ jobs:
         if [ -z "$(git status --porcelain)" ]; then
           echo "Nothing has changed; skipping commit ..."
         else
-          git config user.name "${{ vars.WORKFLOW_USER_NAME }}"
-          git config user.email "${{ vars.WORKFLOW_USER_EMAIL }}"
+          git config user.name "zdenko-kovac"
+          git config user.email "zdenko.kovac@sap.com"
           git add -A
           git commit -m "Bump chart/app version from $current_chart_version/$current_app_version to $target_chart_version/$target_app_version"
         fi
@@ -167,8 +167,8 @@ jobs:
         if [ -z "$(git status --porcelain)" ]; then
           echo "Nothing has changed; skipping commit ..."
         else
-          git config user.name "${{ vars.WORKFLOW_USER_NAME }}"
-          git config user.email "${{ vars.WORKFLOW_USER_EMAIL }}"
+          git config user.name "zdenko-kovac"
+          git config user.email "zdenko.kovac@sap.com"
           git add -A
           git commit -m "Update chart docs"
         fi
@@ -196,7 +196,7 @@ jobs:
     - name: Create Release
       if: steps.get_target_release.outputs.create_release == 'true'
       env:
-        GH_TOKEN: ${{ secrets.WORKFLOW_USER_GH_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         gh release create ${{ steps.get_target_release.outputs.tag }} \
           --target "${{ steps.get_target_commit.outputs.sha }}"
